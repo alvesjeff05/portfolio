@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Nova Square', sans-serif;
+}
+
+.main{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid white;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: black;
+    background: rgb(58,109,180);
+    background: linear-gradient(90deg, rgba(58,109,180,1) 0%, rgba(29,247,253,1) 50%, rgba(17,18,18,1) 100%);
+}
+
+.main::before{
+    content: '';
+    background-image: url('');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 140vw;
+    height: 100vh;
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.main::after{
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100vw;
+    height: 140vh;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    transform: rotate(180deg);
+}
+
+body{
+    background: rgb(58,109,180);
+    background: radial-gradient(circle, rgba(58,109,180,1) 0%, rgba(29,247,253,1) 50%, rgba(17,18,18,1) 100%);
+}
+
+a{
+    color: purple;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width:768px){
+    .main{
+        max-width: 1024px;
+        margin: 1rem auto;
+    }
+
+    .main::before,
+    .main::after
+    {
+        width: 70vw;
+    }
+}
+
+.icone{
+    width: 5vw;
+    height: 5vh;
+}
+
